@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Jean-Eudes CODO</title>
+    <meta name="description" content="Blog de Eudes - Articles sur l'IA, NLP et systèmes autonomes">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/articles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">CJ</a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="projects.html" class="nav-link">Projets</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="cv/" class="nav-link nav-cv">CV</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Blog</h1>
+            <p class="hero-subtitle">Articles mensuels sur l'IA et les systèmes autonomes</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <!-- View Toggle -->
+            <div class="blog-header">
+                <h2>Articles Récents</h2>
+                <button class="view-toggle" id="viewToggle" aria-label="Toggle between grid and list view">
+                    <svg class="icon-grid" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <rect x="2" y="2" width="4" height="4"></rect>
+                        <rect x="8" y="2" width="4" height="4"></rect>
+                        <rect x="14" y="2" width="4" height="4"></rect>
+                        <rect x="2" y="8" width="4" height="4"></rect>
+                        <rect x="8" y="8" width="4" height="4"></rect>
+                        <rect x="14" y="8" width="4" height="4"></rect>
+                    </svg>
+                    <svg class="icon-list" style="display: none;" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <rect x="2" y="3" width="16" height="2"></rect>
+                        <rect x="2" y="9" width="16" height="2"></rect>
+                        <rect x="2" y="15" width="16" height="2"></rect>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Articles Container -->
+            <div class="articles-container grid-view" id="articlesContainer">
+                <!-- Article 1 -->
+                <article class="article-card">
+                    <div class="article-date">6 avril 2026</div>
+                    <h3 class="article-title">Ma première expérience avec les LLMs</h3>
+                    <p class="article-excerpt">
+                        Découvrez comment j'ai construit mon premier projet utilisant GPT et comment cela a changé mon approche du développement. 
+                        Un retour d'expérience sur les pièges à éviter et les bonnes pratiques.
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">IA</span>
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <a href="articles/article_1.html" class="article-link">Lire l'article →</a>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card">
+                    <div class="article-date">1er avril 2026</div>
+                    <h3 class="article-title">Débuter avec ROS 2 - Premier robot</h3>
+                    <p class="article-excerpt">
+                        Guide complet pour configurer ROS 2 et créer votre premier nœud de communication. 
+                        De l'installation à la publication de messages, tout ce que vous devez savoir.
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">Robotique</span>
+                        <span class="tag">ROS 2</span>
+                        <span class="tag">C++</span>
+                    </div>
+                    <a href="articles/article_2.html" class="article-link">Lire l'article →</a>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card">
+                    <div class="article-date">25 mars 2026</div>
+                    <h3 class="article-title">RAG vs Fine-tuning: Quelle approche choisir?</h3>
+                    <p class="article-excerpt">
+                        Comparaison détaillée entre Retrieval-Augmented Generation et le fine-tuning. 
+                        Analyse des coûts, performances et cas d'usage pour chaque approche.
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Architecture</span>
+                        <span class="tag">Tutoriel</span>
+                    </div>
+                    <a href="articles/article_3.html" class="article-link">Lire l'article →</a>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card">
+                    <div class="article-date">15 mars 2026</div>
+                    <h3 class="article-title">Sentiment Analysis en temps réel avec Transformers</h3>
+                    <p class="article-excerpt">
+                        Comment j'ai implémenté un système de sentiment analysis capable de traiter 
+                        des flux Twitter en temps réel et générer des alertes automatiques.
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">Finance Tech</span>
+                    </div>
+                    <a href="articles/article_4.html" class="article-link">Lire l'article →</a>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card">
+                    <div class="article-date">5 mars 2026</div>
+                    <h3 class="article-title">Optimiser les embeddings pour la recherche sémantique</h3>
+                    <p class="article-excerpt">
+                        Exploration des techniques avancées pour créer des embeddings efficaces 
+                        et optimiser la recherche sémantique dans des bases de données volumineuses.
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">IA</span>
+                        <span class="tag">Embeddings</span>
+                        <span class="tag">Performance</span>
+                    </div>
+                    <a href="articles/article_5.html" class="article-link">Lire l'article →</a>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card">
+                    <div class="article-date">20 février 2026</div>
+                    <h3 class="article-title">Gazebo: Simulation robotique avancée</h3>
+                    <p class="article-excerpt">
+                        Guide complet sur la création d'un environnement de simulation complexe 
+                        avec Gazebo. Modélisation physique, capteurs virtuels et validation d'algorithmes.
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">Robotique</span>
+                        <span class="tag">Simulation</span>
+                        <span class="tag">Tutoriel</span>
+                    </div>
+                    <a href="articles/article_6.html" class="article-link">Lire l'article →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Jean-Eudes CODO</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="mailto:eudescodo00@email.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const viewToggle = document.getElementById('viewToggle');
+        const articlesContainer = document.getElementById('articlesContainer');
+        const iconGrid = document.querySelector('.icon-grid');
+        const iconList = document.querySelector('.icon-list');
+
+        viewToggle.addEventListener('click', () => {
+            articlesContainer.classList.toggle('grid-view');
+            articlesContainer.classList.toggle('list-view');
+            
+            iconGrid.style.display = iconGrid.style.display === 'none' ? 'block' : 'none';
+            iconList.style.display = iconList.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
