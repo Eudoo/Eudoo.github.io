@@ -206,14 +206,14 @@ h1, h2, h3, h4 {
     font-weight: 800;
     margin-bottom: var(--spacing-sm);
     letter-spacing: -0.02em;
-    color: var(--color-text);
+    color: var(--color-text); /* Force back to text color for "Bonjour..." */
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .hero-name span {
-    color: var(--color-primary);
+    color: var(--color-primary); /* Force name to be blue */
 }
 
 .hero-description {
@@ -495,9 +495,9 @@ h1, h2, h3, h4 {
 }
 
 .social-btn:hover {
-    background-color: var(--color-text);
-    color: var(--color-bg);
-    border-color: var(--color-text);
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
     transform: translateY(-3px);
 }
 
@@ -514,6 +514,28 @@ h1, h2, h3, h4 {
 
 .footer p {
     font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color var(--transition-normal);
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
 }
 
 /* ===========================
@@ -577,4 +599,6 @@ h1, h2, h3, h4 {
     .nav-link {
         font-size: 0.85rem;
     }
+}
+ }
 }

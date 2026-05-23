@@ -2,190 +2,138 @@
    Blog / Articles Styles
    =========================== */
 
-.blog {
-    padding: var(--spacing-xxl) 0;
+/* Hero Blog */
+.hero-blog {
+    padding: 10vh 0 6vh;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg);
 }
 
-/* Blog Header with Toggle */
-.blog-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--spacing-xl);
-    flex-wrap: wrap;
-    gap: var(--spacing-lg);
-}
-
-.blog-header h2 {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.view-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border: 2px solid var(--color-border);
-    background-color: var(--color-accent);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all var(--transition);
-    color: var(--color-text);
-}
-
-.view-toggle:hover {
-    border-color: var(--color-primary);
+.hero-blog-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
     color: var(--color-primary);
-    transform: scale(1.05);
 }
 
-/* Articles Container */
+.hero-blog-description {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 700px;
+}
+
+.blog {
+    padding: var(--spacing-xl) 0 var(--spacing-xxl);
+}
+
+/* Articles Container (List View Only) */
 .articles-container {
-    transition: all var(--transition);
-}
-
-/* ===========================
-   Grid View (Default)
-   =========================== */
-
-.articles-container.grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: var(--spacing-lg);
-}
-
-.articles-container.grid-view .article-card {
     display: flex;
     flex-direction: column;
 }
 
 /* ===========================
-   List View
+   Article Row Styles
    =========================== */
 
-.articles-container.list-view {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-.articles-container.list-view .article-card {
+.article-row {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: var(--spacing-lg);
-    align-items: start;
+    grid-template-columns: 150px 1fr;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: all var(--transition-normal);
+    position: relative;
 }
 
-.articles-container.list-view .article-date {
-    grid-column: 1;
-    grid-row: 1 / span 3;
+.article-row:last-child {
+    border-bottom: none;
 }
 
-.articles-container.list-view .article-title {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.articles-container.list-view .article-excerpt {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.articles-container.list-view .article-tags {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-/* ===========================
-   Article Card Styles
-   =========================== */
-
-.article-card {
-    padding: var(--spacing-lg);
-    background-color: var(--color-accent);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    transition: all var(--transition);
-}
-
-.article-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.08);
-    transform: translateY(-4px);
+.article-row:hover {
+    transform: translateX(10px);
 }
 
 /* Article Date */
 .article-date {
-    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
     color: var(--color-text-light);
-    font-weight: 500;
-    margin-bottom: var(--spacing-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    padding-top: 5px;
+}
+
+/* Article Content Container */
+.article-content {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Article Title */
 .article-title {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-md);
-    line-height: 1.4;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
     color: var(--color-text);
-}
-
-.article-title:hover {
-    color: var(--color-primary);
+    letter-spacing: -0.01em;
 }
 
 /* Article Excerpt */
 .article-excerpt {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--color-text-light);
     line-height: 1.6;
     margin-bottom: var(--spacing-md);
-    flex-grow: 1;
+    max-width: 800px;
 }
 
 /* Article Tags */
 .article-tags {
     display: flex;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
+    gap: var(--spacing-sm);
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .tag {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background-color: var(--color-primary);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    transition: all var(--transition);
+    padding: 0.2rem 0.6rem;
+    background-color: transparent;
+    color: var(--color-text-light);
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: var(--font-mono);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
 }
 
-.tag:hover {
-    background-color: var(--color-primary-hover);
-    transform: scale(1.05);
+/* Read More Link / Icon */
+.article-link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+    text-indent: -9999px;
 }
 
-/* Article Link */
-.article-link {
-    display: inline-block;
+.read-icon {
+    display: inline-flex;
+    align-items: center;
     color: var(--color-primary);
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: all var(--transition);
+    margin-left: auto;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all var(--transition-normal);
 }
 
-.article-link:hover {
-    color: var(--color-primary-hover);
-    margin-left: 4px;
+.article-row:hover .read-icon {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* ===========================
@@ -193,81 +141,35 @@
    =========================== */
 
 @media (max-width: 768px) {
-    .blog-header {
-        justify-content: space-between;
+    .hero-blog {
+        padding: 8vh 0 4vh;
+    }
+    
+    .hero-blog-title {
+        font-size: 2rem;
     }
 
-    .blog-header h2 {
-        font-size: 1.5rem;
-    }
-
-    .articles-container.grid-view {
+    .article-row {
         grid-template-columns: 1fr;
-    }
-
-    .articles-container.list-view .article-card {
-        grid-template-columns: 100px 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .article-title {
-        font-size: 1.1rem;
+        gap: var(--spacing-xs);
+        padding: var(--spacing-lg) 0;
     }
 
     .article-date {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .blog-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .blog-header h2 {
-        font-size: 1.3rem;
-    }
-
-    .articles-container.grid-view {
-        gap: var(--spacing-md);
-    }
-
-    .article-card {
-        padding: var(--spacing-md);
+        padding-top: 0;
+        font-size: 0.85rem;
     }
 
     .article-title {
-        font-size: 1rem;
-        margin-bottom: var(--spacing-sm);
+        font-size: 1.4rem;
     }
 
-    .article-excerpt {
-        font-size: 0.9rem;
-        margin-bottom: var(--spacing-sm);
+    .read-icon {
+        display: none; /* Hide icon on mobile, the whole card is clickable anyway */
     }
-
-    .articles-container.list-view .article-card {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-sm);
-    }
-
-    .articles-container.list-view .article-card .article-date {
-        grid-column: 1;
-        grid-row: auto;
-        margin-bottom: var(--spacing-sm);
-    }
-
-    .articles-container.list-view .article-card .article-title {
-        grid-column: 1;
-        margin-bottom: var(--spacing-sm);
-    }
-
-    .articles-container.list-view .article-card .article-excerpt {
-        grid-column: 1;
-    }
-
-    .articles-container.list-view .article-card .article-tags {
-        grid-column: 1;
+    
+    .article-row:hover {
+        transform: none;
     }
 }
+

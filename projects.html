@@ -26,133 +26,122 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-projects">
         <div class="container">
-            <h1 class="hero-title">Projets</h1>
-            <p class="hero-subtitle">Mes réalisations en IA, Robotique et Finance Tech</p>
+            <h1 class="hero-projects-title reveal">Mes projets</h1>
+            <p class="hero-projects-description reveal">
+                Quelques projets sur lesquels j'ai travaillé.
+            </p>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar reveal">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="robotics">Robotique</button>
+                <button class="filter-btn" data-filter="nlp">NLP & LLMs</button>
+            </div>
+
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <article class="project-card reveal">
-                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <article class="project-card reveal" data-category="nlp ml">
+                    <div class="project-image" style="background-color: #f4f4f4;">
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">RAG Chatbot Intelligent</h3>
                         <p class="project-description">
-                            Système de chatbot utilisant la Récupération-Augmentée par Génération combinée à des LLMs pour des réponses contextualisées et précises.
+                            Système de chatbot utilisant la Récupération-Augmentée par Génération combinée à des LLMs pour des réponses contextualisées et précises. Intégration de bases de données vectorielles pour des requêtes ultra-rapides.
                         </p>
                         <div class="project-tags">
                             <span class="tag">LLMs</span>
                             <span class="tag">RAG</span>
                             <span class="tag">Python</span>
+                            <span class="tag">Vector DB</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Démo</a>
+                            <a href="#" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="#" class="project-link" aria-label="Live Demo">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Project 2 -->
-                <article class="project-card reveal">
-                    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                <article class="project-card reveal" data-category="robotics">
+                    <div class="project-image" style="background-color: #f4f4f4;">
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">Navigation Robot ROS 2</h3>
+                        <h3 class="project-title">Navigation Autonome ROS 2</h3>
                         <p class="project-description">
-                            Robot autonome capable de naviguer dans des environnements complexes avec détection d'obstacles et évitement en temps réel.
+                            Robot autonome capable de naviguer dans des environnements complexes avec détection d'obstacles et évitement en temps réel. Algorithmes de path planning optimisés.
                         </p>
                         <div class="project-tags">
                             <span class="tag">ROS 2</span>
                             <span class="tag">C++</span>
-                            <span class="tag">Robotique</span>
+                            <span class="tag">Lidar</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Démo</a>
+                            <a href="#" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Project 3 -->
-                <article class="project-card reveal">
-                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <article class="project-card reveal" data-category="nlp ml">
+                    <div class="project-image" style="background-color: #f4f4f4;">
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Market Sentiment Analyzer</h3>
                         <p class="project-description">
-                            Analyseur de sentiment en temps réel pour les flux financiers, alimentant des alertes automatiques et des décisions de trading.
+                            Analyseur de sentiment en temps réel pour les flux financiers, alimentant des alertes automatiques et des décisions de trading. Traitement de milliers de tweets/minute.
                         </p>
                         <div class="project-tags">
                             <span class="tag">NLP</span>
+                            <span class="tag">Transformers</span>
                             <span class="tag">Finance Tech</span>
-                            <span class="tag">Python</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Démo</a>
+                            <a href="#" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Project 4 -->
-                <article class="project-card reveal">
-                    <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Fine-tuning LLM Custom</h3>
-                        <p class="project-description">
-                            Adaptation d'un modèle de langage large sur un domaine spécifique avec optimisation des hyperparamètres et évaluation rigoureuse.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">LLMs</span>
-                            <span class="tag">Transformers</span>
-                            <span class="tag">PyTorch</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Démo</a>
-                        </div>
+                <article class="project-card reveal" data-category="ml">
+                    <div class="project-image" style="background-color: #f4f4f4;">
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
                     </div>
-                </article>
-
-                <!-- Project 5 -->
-                <article class="project-card reveal">
-                    <div class="project-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
                     <div class="project-content">
-                        <h3 class="project-title">Computer Vision Detection</h3>
+                        <h3 class="project-title">Computer Vision & Tracking</h3>
                         <p class="project-description">
-                            Système de détection d'objets haute performance pour applications robotiques, traçant les mouvements en temps réel.
+                            Système de détection d'objets haute performance pour applications robotiques. Architecture YOLO optimisée pour fonctionner sur edge devices (Jetson Nano).
                         </p>
                         <div class="project-tags">
                             <span class="tag">Vision</span>
-                            <span class="tag">YOLO</span>
-                            <span class="tag">Python</span>
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">Edge AI</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Démo</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 6 -->
-                <article class="project-card reveal">
-                    <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Vector Database Search</h3>
-                        <p class="project-description">
-                            Infrastructure de recherche sémantique hautement scalable utilisant des embeddings et indexation vectorielle optimisée.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Embeddings</span>
-                            <span class="tag">Vector DB</span>
-                            <span class="tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Démo</a>
+                            <a href="#" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="#" class="project-link" aria-label="Live Demo">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
                         </div>
                     </div>
                 </article>
@@ -163,16 +152,26 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Jean-Eudes CODO</p>
+            <p>&copy; 2026 Jean-Eudes CODO.</p>
             <div class="footer-links">
-                <a href="https://github.com/Eudoo" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/eudes-codo" target="_blank">LinkedIn</a>
-                <a href="mailto:eudescodo00@gmail.com">Email</a>
+                <a href="https://github.com/Eudoo" target="_blank">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/eudes-codo" target="_blank">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:eudescodo00@gmail.com">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Email
+                </a>
             </div>
         </div>
     </footer>
 
     <script>
+        // Scroll Reveal Logic
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -204,6 +203,33 @@
         };
 
         window.onload = reveal;
+
+        // Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Filter cards
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category').split(' ');
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        card.style.display = 'flex';
+                        // Re-trigger reveal animation for newly shown cards
+                        setTimeout(() => card.classList.add('active'), 50);
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('active');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

@@ -26,133 +26,91 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-blog">
         <div class="container">
-            <h1 class="hero-title">Blog</h1>
-            <p class="hero-subtitle">Articles mensuels sur l'IA et les systèmes autonomes</p>
+            <h1 class="hero-blog-title reveal">Mon blog</h1>
+            <p class="hero-blog-description reveal">
+                Partage d'expériences, tutoriels et analyses sur mes apprentissages en intelligence artificielle et robotique.
+            </p>
         </div>
     </section>
 
     <!-- Blog Section -->
     <section class="blog" id="blog">
         <div class="container">
-            <!-- View Toggle -->
-            <div class="blog-header reveal">
-                <h2>Articles Récents</h2>
-                <button class="view-toggle" id="viewToggle" aria-label="Toggle between grid and list view">
-                    <svg class="icon-grid" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <rect x="2" y="2" width="4" height="4"></rect>
-                        <rect x="8" y="2" width="4" height="4"></rect>
-                        <rect x="14" y="2" width="4" height="4"></rect>
-                        <rect x="2" y="8" width="4" height="4"></rect>
-                        <rect x="8" y="8" width="4" height="4"></rect>
-                        <rect x="14" y="8" width="4" height="4"></rect>
-                    </svg>
-                    <svg class="icon-list" style="display: none;" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <rect x="2" y="3" width="16" height="2"></rect>
-                        <rect x="2" y="9" width="16" height="2"></rect>
-                        <rect x="2" y="15" width="16" height="2"></rect>
-                    </svg>
-                </button>
-            </div>
-
             <!-- Articles Container -->
-            <div class="articles-container grid-view" id="articlesContainer">
+            <div class="articles-container" id="articlesContainer">
+                
                 <!-- Article 1 -->
-                <article class="article-card reveal">
-                    <div class="article-date">6 avril 2026</div>
-                    <h3 class="article-title">Ma première expérience avec les LLMs</h3>
-                    <p class="article-excerpt">
-                        Découvrez comment j'ai construit mon premier projet utilisant GPT et comment cela a changé mon approche du développement. 
-                        Un retour d'expérience sur les pièges à éviter et les bonnes pratiques.
-                    </p>
-                    <div class="article-tags">
-                        <span class="tag">IA</span>
-                        <span class="tag">LLMs</span>
-                        <span class="tag">Python</span>
+                <article class="article-row reveal">
+                    <div class="article-date">06 AVR 2026</div>
+                    <div class="article-content">
+                        <h3 class="article-title">Ma première expérience avec les LLMs</h3>
+                        <p class="article-excerpt">
+                            Découvrez comment j'ai construit mon premier projet utilisant GPT et comment cela a changé mon approche du développement. Un retour d'expérience sur les pièges à éviter et les bonnes pratiques.
+                        </p>
+                        <div class="article-tags">
+                            <span class="tag">IA</span>
+                            <span class="tag">LLMs</span>
+                            <span class="tag">Python</span>
+                            <span class="read-icon">Lire <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
                     </div>
-                    <a href="articles/article_1.html" class="article-link">Lire l'article →</a>
+                    <a href="articles/article_1.html" class="article-link-overlay">Lire l'article</a>
                 </article>
 
                 <!-- Article 2 -->
-                <article class="article-card reveal">
-                    <div class="article-date">1er avril 2026</div>
-                    <h3 class="article-title">Débuter avec ROS 2 - Premier robot</h3>
-                    <p class="article-excerpt">
-                        Guide complet pour configurer ROS 2 et créer votre premier nœud de communication. 
-                        De l'installation à la publication de messages, tout ce que vous devez savoir.
-                    </p>
-                    <div class="article-tags">
-                        <span class="tag">Robotique</span>
-                        <span class="tag">ROS 2</span>
-                        <span class="tag">C++</span>
+                <article class="article-row reveal">
+                    <div class="article-date">01 AVR 2026</div>
+                    <div class="article-content">
+                        <h3 class="article-title">Débuter avec ROS 2 - Premier robot</h3>
+                        <p class="article-excerpt">
+                            Guide complet pour configurer ROS 2 et créer votre premier nœud de communication. De l'installation à la publication de messages, tout ce que vous devez savoir pour bien démarrer.
+                        </p>
+                        <div class="article-tags">
+                            <span class="tag">Robotique</span>
+                            <span class="tag">ROS 2</span>
+                            <span class="tag">C++</span>
+                            <span class="read-icon">Lire <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
                     </div>
-                    <a href="articles/article_2.html" class="article-link">Lire l'article →</a>
+                    <a href="articles/article_2.html" class="article-link-overlay">Lire l'article</a>
                 </article>
 
                 <!-- Article 3 -->
-                <article class="article-card reveal">
-                    <div class="article-date">25 mars 2026</div>
-                    <h3 class="article-title">RAG vs Fine-tuning: Quelle approche choisir?</h3>
-                    <p class="article-excerpt">
-                        Comparaison détaillée entre Retrieval-Augmented Generation et le fine-tuning. 
-                        Analyse des coûts, performances et cas d'usage pour chaque approche.
-                    </p>
-                    <div class="article-tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">Architecture</span>
-                        <span class="tag">Tutoriel</span>
+                <article class="article-row reveal">
+                    <div class="article-date">25 MAR 2026</div>
+                    <div class="article-content">
+                        <h3 class="article-title">RAG vs Fine-tuning: Quelle approche choisir?</h3>
+                        <p class="article-excerpt">
+                            Comparaison détaillée entre Retrieval-Augmented Generation et le fine-tuning. Analyse des coûts, performances et cas d'usage pour chaque approche dans la construction de systèmes d'IA.
+                        </p>
+                        <div class="article-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Architecture</span>
+                            <span class="read-icon">Lire <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
                     </div>
-                    <a href="articles/article_3.html" class="article-link">Lire l'article →</a>
+                    <a href="articles/article_3.html" class="article-link-overlay">Lire l'article</a>
                 </article>
 
                 <!-- Article 4 -->
-                <article class="article-card reveal">
-                    <div class="article-date">15 mars 2026</div>
-                    <h3 class="article-title">Sentiment Analysis en temps réel avec Transformers</h3>
-                    <p class="article-excerpt">
-                        Comment j'ai implémenté un système de sentiment analysis capable de traiter 
-                        des flux Twitter en temps réel et générer des alertes automatiques.
-                    </p>
-                    <div class="article-tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">Transformers</span>
-                        <span class="tag">Finance Tech</span>
+                <article class="article-row reveal">
+                    <div class="article-date">15 MAR 2026</div>
+                    <div class="article-content">
+                        <h3 class="article-title">Sentiment Analysis en temps réel avec Transformers</h3>
+                        <p class="article-excerpt">
+                            Comment j'ai implémenté un système de sentiment analysis capable de traiter des flux Twitter en temps réel et générer des alertes automatiques.
+                        </p>
+                        <div class="article-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Transformers</span>
+                            <span class="read-icon">Lire <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
                     </div>
-                    <a href="articles/article_4.html" class="article-link">Lire l'article →</a>
+                    <a href="articles/article_4.html" class="article-link-overlay">Lire l'article</a>
                 </article>
 
-                <!-- Article 5 -->
-                <article class="article-card reveal">
-                    <div class="article-date">5 mars 2026</div>
-                    <h3 class="article-title">Optimiser les embeddings pour la recherche sémantique</h3>
-                    <p class="article-excerpt">
-                        Exploration des techniques avancées pour créer des embeddings efficaces 
-                        et optimiser la recherche sémantique dans des bases de données volumineuses.
-                    </p>
-                    <div class="article-tags">
-                        <span class="tag">IA</span>
-                        <span class="tag">Embeddings</span>
-                        <span class="tag">Performance</span>
-                    </div>
-                    <a href="articles/article_5.html" class="article-link">Lire l'article →</a>
-                </article>
-
-                <!-- Article 6 -->
-                <article class="article-card reveal">
-                    <div class="article-date">20 février 2026</div>
-                    <h3 class="article-title">Gazebo: Simulation robotique avancée</h3>
-                    <p class="article-excerpt">
-                        Guide complet sur la création d'un environnement de simulation complexe 
-                        avec Gazebo. Modélisation physique, capteurs virtuels et validation d'algorithmes.
-                    </p>
-                    <div class="article-tags">
-                        <span class="tag">Robotique</span>
-                        <span class="tag">Simulation</span>
-                        <span class="tag">Tutoriel</span>
-                    </div>
-                    <a href="articles/article_6.html" class="article-link">Lire l'article →</a>
-                </article>
             </div>
         </div>
     </section>
@@ -160,29 +118,25 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Jean-Eudes CODO</p>
+            <p>&copy; 2026 Jean-Eudes CODO.</p>
             <div class="footer-links">
-                <a href="https://github.com/Eudoo" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/eudes-codo" target="_blank">LinkedIn</a>
-                <a href="mailto:eudescodo00@gmail.com">Email</a>
+                <a href="https://github.com/Eudoo" target="_blank">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/eudes-codo" target="_blank">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:eudescodo00@gmail.com">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Email
+                </a>
             </div>
         </div>
     </footer>
 
     <script>
-        const viewToggle = document.getElementById('viewToggle');
-        const articlesContainer = document.getElementById('articlesContainer');
-        const iconGrid = document.querySelector('.icon-grid');
-        const iconList = document.querySelector('.icon-list');
-
-        viewToggle.addEventListener('click', () => {
-            articlesContainer.classList.toggle('grid-view');
-            articlesContainer.classList.toggle('list-view');
-            
-            iconGrid.style.display = iconGrid.style.display === 'none' ? 'block' : 'none';
-            iconList.style.display = iconList.style.display === 'none' ? 'block' : 'none';
-        });
-
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
