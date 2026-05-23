@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="cv.css">
 </head>
 <body>
+    <div class="scroll-progress" id="scrollBar"></div>
     <!-- Header Navigation -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header-content">
                 <a href="../index.html" class="logo">CJ</a>
@@ -33,7 +34,7 @@
     </section>
 
     <!-- CV Section -->
-    <section class="cv-section">
+    <section class="cv-section reveal">
         <div class="container">
             <div class="cv-container">
                 <!-- Download Button -->
@@ -75,5 +76,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.onscroll = function() {
+            const header = document.getElementById("header");
+            const scrollBar = document.getElementById("scrollBar");
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            
+            scrollBar.style.width = scrolled + "%";
+
+            if (winScroll > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+            
+            reveal();
+        };
+
+        window.onload = reveal;
+    </script>
 </body>
 </html>
