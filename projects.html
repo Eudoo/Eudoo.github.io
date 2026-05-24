@@ -42,52 +42,73 @@
             <div class="filter-bar reveal">
                 <button class="filter-btn active" data-filter="all">Tous</button>
                 <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="vision">Computer Vision</button>
                 <button class="filter-btn" data-filter="robotics">Robotique</button>
                 <button class="filter-btn" data-filter="nlp">NLP & LLMs</button>
+                <button class="filter-btn" data-filter="opti">Optimisation</button>
             </div>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card reveal" data-category="nlp ml">
+                <!-- Project 1: MPVRP-CC -->
+                <article class="project-card reveal" data-category="opti">
+                    <div class="project-image" style="background-color: #f4f4f4;">
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MPVRP-CC</h3>
+                        <p class="project-description">
+                            Développement d'une variante du problème de routage de véhicules multi-produits : "Multi-Product Vehicule Routing Problem with Change-Over Cost", intégrant les coûts de changement de production et les contraintes de nettoyage entre compartiments.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Optimisation</span>
+                            <span class="tag">VRP</span>
+                            <span class="tag">Math Modeling</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: MacroLLM -->
+                <article class="project-card reveal" data-category="nlp">
                     <div class="project-image" style="background-color: #f4f4f4;">
                         <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">RAG Chatbot Intelligent</h3>
+                        <h3 class="project-title">MacroLLM - AI Forex Assistant</h3>
                         <p class="project-description">
-                            Système de chatbot utilisant la Récupération-Augmentée par Génération combinée à des LLMs pour des réponses contextualisées et précises. Intégration de bases de données vectorielles pour des requêtes ultra-rapides.
+                            Assistant basé sur DistilRoBERTa et une architecture RAG (Google Gemini) pour analyser l'influence des annonces économiques et générer des recommandations de trading prédictives sur les paires de devises.
                         </p>
                         <div class="project-tags">
                             <span class="tag">LLMs</span>
                             <span class="tag">RAG</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Vector DB</span>
+                            <span class="tag">DistilRoBERTa</span>
+                            <span class="tag">Finance</span>
                         </div>
                         <div class="project-links">
                             <a href="#" target="_blank" class="project-link" aria-label="GitHub">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             </a>
-                            <a href="#" class="project-link" aria-label="Live Demo">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Project 2 -->
-                <article class="project-card reveal" data-category="robotics">
+                <!-- Project 3: Opti'Plan -->
+                <article class="project-card reveal" data-category="opti">
                     <div class="project-image" style="background-color: #f4f4f4;">
-                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Navigation Autonome ROS 2</h3>
+                        <h3 class="project-title">Opti'Plan</h3>
                         <p class="project-description">
-                            Robot autonome capable de naviguer dans des environnements complexes avec détection d'obstacles et évitement en temps réel. Algorithmes de path planning optimisés.
+                            Système de planification automatisée des soutenances utilisant la programmation par contraintes, géré avec le solveur de Gurobi. Réduction du temps de planification de 2-3 jours à moins de 10 minutes.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">ROS 2</span>
-                            <span class="tag">C++</span>
-                            <span class="tag">Lidar</span>
+                            <span class="tag">Constraint Programming</span>
+                            <span class="tag">Optimisation</span>
                         </div>
                         <div class="project-links">
                             <a href="#" target="_blank" class="project-link" aria-label="GitHub">
@@ -97,20 +118,20 @@
                     </div>
                 </article>
 
-                <!-- Project 3 -->
-                <article class="project-card reveal" data-category="nlp ml">
+                <!-- Project 4: ifri-mini-ml-lib -->
+                <article class="project-card reveal" data-category="ml">
                     <div class="project-image" style="background-color: #f4f4f4;">
                         <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Market Sentiment Analyzer</h3>
+                        <h3 class="project-title">ifri-mini-ml-lib</h3>
                         <p class="project-description">
-                            Analyseur de sentiment en temps réel pour les flux financiers, alimentant des alertes automatiques et des décisions de trading. Traitement de milliers de tweets/minute.
+                            Développement du module de réduction de dimensionnalité (PCA, t-SNE) pour une librairie ML éducative construite de zéro à l'IFRI, sans dépendances externes.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">NLP</span>
-                            <span class="tag">Transformers</span>
-                            <span class="tag">Finance Tech</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Maths</span>
+                            <span class="tag">PCA/t-SNE</span>
                         </div>
                         <div class="project-links">
                             <a href="#" target="_blank" class="project-link" aria-label="GitHub">
@@ -120,27 +141,70 @@
                     </div>
                 </article>
 
-                <!-- Project 4 -->
-                <article class="project-card reveal" data-category="ml">
+                <!-- Project 5: Robot de tri autonome -->
+                <article class="project-card reveal" data-category="robotics vision">
                     <div class="project-image" style="background-color: #f4f4f4;">
-                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Computer Vision & Tracking</h3>
+                        <h3 class="project-title">Robot de tri autonome (Tekbot)</h3>
                         <p class="project-description">
-                            Système de détection d'objets haute performance pour applications robotiques. Architecture YOLO optimisée pour fonctionner sur edge devices (Jetson Nano).
+                            Co-développement d'un robot autonome (ROSMASTER X3) dédié au tri intelligent des déchets, intégrant la vision par ordinateur, des algorithmes de recherche de chemin (A*), et de contrôle embarqué. 2ème place au Tekbot Robotics Challenge 2025.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">Vision</span>
-                            <span class="tag">YOLOv8</span>
-                            <span class="tag">Edge AI</span>
+                            <span class="tag">Robotique</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">ROS 2</span>
                         </div>
                         <div class="project-links">
                             <a href="#" target="_blank" class="project-link" aria-label="GitHub">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             </a>
-                            <a href="#" class="project-link" aria-label="Live Demo">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Le Foncier Intelligent -->
+                <article class="project-card reveal" data-category="vision">
+                    <div class="project-image" style="background-color: #f4f4f4;">
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Le Foncier Intelligent</h3>
+                        <p class="project-description">
+                            Solution d'analyse foncière combinant l'OCR multimodal pour l'extraction de croquis topographiques, le géocodage, et l'analyse de l'utilisation des sols via croisement d'images satellites. (Hackathon ASIN).
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">OCR</span>
+                            <span class="tag">Satellite Imagery</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7: Tracking by Drone -->
+                <article class="project-card reveal" data-category="vision robotics">
+                    <div class="project-image" style="background-color: #f4f4f4;">
+                        <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-light)" stroke-width="1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tracking by Drone</h3>
+                        <p class="project-description">
+                            Conception d'un système combinant la vision par ordinateur et des algorithmes de contrôle embarqué pour maintenir une cible dans le champ de vision d'un drone (DJI TELLO) tout en ajustant dynamiquement sa trajectoire.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Drone</span>
+                            <span class="tag">Control Algorithms</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             </a>
                         </div>
                     </div>
