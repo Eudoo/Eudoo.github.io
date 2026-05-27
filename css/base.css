@@ -28,18 +28,6 @@
     --border-radius: 8px;
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-bg: #0f0f0f;
-        --color-text: #e5e5e5;
-        --color-text-light: #a0a0a0;
-        --color-border: #2a2a2a;
-        --color-accent: #151515;
-        --header-bg: rgba(15, 15, 15, 0.8);
-    }
-}
-
 /* ===========================
    Global Styles
    =========================== */
