@@ -16,13 +16,20 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">CJ</a>
-                <nav class="nav">
+                <nav class="nav" id="nav">
                     <a href="index.html" class="nav-link">Accueil</a>
-                    <a href="projects.html" class="nav-link">Projets</a>
+                    <a href="projects.html" class="nav-link" aria-current="page">Projets</a>
                     <a href="experiences.html" class="nav-link">Expériences</a>
                     <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="cv/CV_Jean_Eudes_CODO_2026.pdf" target="_blank" class="nav-link nav-cv">CV</a>
                 </nav>
+                <div class="header-actions">
+                    <a href="cv/CV_Jean_Eudes_CODO_2026.pdf" target="_blank" class="nav-cv">CV</a>
+                    <button class="nav-toggle" id="navToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -106,7 +113,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Opti'Plan</h3>
                         <p class="project-description">
-                            Système de planification automatisée des soutenances utilisant la programmation par contraintes, géré avec le solveur de Gurobi. Réduction du temps de planification de 2-3 jours à moins de 10 minutes.
+                            Système de planification automatisée des soutenances utilisant la programmation par contraintes, géré avec le solveur de Gurobi. Réduction du temps de planification de plus d'1 heure à moins de 10 minutes.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Constraint Programming</span>
@@ -269,6 +276,27 @@
         };
 
         window.onload = reveal;
+
+        // Menu mobile
+        const navToggle = document.getElementById("navToggle");
+
+        function setMenu(open) {
+            document.getElementById("header").classList.toggle("nav-open", open);
+            navToggle.setAttribute("aria-expanded", open);
+            navToggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+        }
+
+        navToggle.addEventListener("click", function() {
+            setMenu(!document.getElementById("header").classList.contains("nav-open"));
+        });
+
+        document.querySelectorAll(".nav-link").forEach(function(link) {
+            link.addEventListener("click", function() { setMenu(false); });
+        });
+
+        document.addEventListener("click", function(e) {
+            if (!document.getElementById("header").contains(e.target)) setMenu(false);
+        });
 
         // Filter Logic
         const filterBtns = document.querySelectorAll('.filter-btn');

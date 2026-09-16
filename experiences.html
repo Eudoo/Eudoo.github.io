@@ -16,13 +16,20 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">CJ</a>
-                <nav class="nav">
+                <nav class="nav" id="nav">
                     <a href="index.html" class="nav-link">Accueil</a>
                     <a href="projects.html" class="nav-link">Projets</a>
-                    <a href="experiences.html" class="nav-link">Expériences</a>
+                    <a href="experiences.html" class="nav-link" aria-current="page">Expériences</a>
                     <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="cv/CV_Jean_Eudes_CODO_2026.pdf" target="_blank" class="nav-link nav-cv">CV</a>
                 </nav>
+                <div class="header-actions">
+                    <a href="cv/CV_Jean_Eudes_CODO_2026.pdf" target="_blank" class="nav-cv">CV</a>
+                    <button class="nav-toggle" id="navToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -51,6 +58,21 @@
                     <!-- Item 1 -->
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
+                        <div class="timeline-date">Fév 2026 - Juil 2026</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Stagiaire IA & Automatisation des processus</h3>
+                            <h4 class="timeline-subtitle">FASHS, Rectorat de l'UAC | Abomey-Calavi, Bénin</h4>
+                            <ul class="timeline-details">
+                                <li>Automatisation du traitement des données académiques et des processus de gestion des notes pour le Service Informatique.</li>
+                                <li>Conception de modèles standardisés de procès-verbaux d'évaluation (PV) et de relevés de notes intégrant des règles de calcul, pour fiabiliser la validation des notes.</li>
+                                <li>Mise en place d'un système automatisé de délivrance et de récupération des relevés de notes, réduisant les erreurs de saisie manuelle et les délais de traitement.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
                         <div class="timeline-date">Juin 2025 - Jan 2026</div>
                         <div class="timeline-content">
                             <h3 class="timeline-title">AI Developer</h3>
@@ -62,7 +84,7 @@
                         </div>
                     </div>
                     
-                    <!-- Item 2 -->
+                    <!-- Item 3 -->
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">Juillet - Août 2024</div>
@@ -238,6 +260,27 @@
         };
 
         window.onload = reveal;
+
+        // Menu mobile
+        const navToggle = document.getElementById("navToggle");
+
+        function setMenu(open) {
+            document.getElementById("header").classList.toggle("nav-open", open);
+            navToggle.setAttribute("aria-expanded", open);
+            navToggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+        }
+
+        navToggle.addEventListener("click", function() {
+            setMenu(!document.getElementById("header").classList.contains("nav-open"));
+        });
+
+        document.querySelectorAll(".nav-link").forEach(function(link) {
+            link.addEventListener("click", function() { setMenu(false); });
+        });
+
+        document.addEventListener("click", function(e) {
+            if (!document.getElementById("header").contains(e.target)) setMenu(false);
+        });
     </script>
 </body>
 </html>
