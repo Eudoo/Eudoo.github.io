@@ -129,6 +129,11 @@
     margin-bottom: var(--spacing-sm);
 }
 
+/* Expérience sans liste de missions */
+.timeline-subtitle:last-child {
+    margin-bottom: 0;
+}
+
 .timeline-details {
     list-style: none;
     margin-top: var(--spacing-sm);
